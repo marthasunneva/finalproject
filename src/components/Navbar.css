@@ -1,0 +1,109 @@
+/* src/index.css */
+
+/* Light (300) */
+@font-face {
+    font-family: 'AU Passata';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/AUPassata_Light.ttf') format('truetype');
+  }
+  
+  /* Regular (400) */
+  @font-face {
+    font-family: 'AU Passata';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/AUPassata_Rg.ttf') format('truetype');
+  }
+  
+  /* Bold (700) */
+  @font-face {
+    font-family: 'AU Passata';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/AUPassata_Bold.ttf') format('truetype');
+  }
+
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family: 'AU Passata', sans-serif;
+  }
+  
+  .navbar__logo img {
+    height: 200px; /* adjust to taste */
+    position: sticky;
+  }
+  
+  .navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Default (regular) link */
+  .navbar__link {
+    position: relative;
+    text-decoration: none;
+    color: #0A0A0A;
+    background-color: #FEFEFE;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 400;            /* regular */
+    transition:
+      font-weight 100ms,
+      border-color 150ms,
+      background-color 150ms,
+      color 150ms;
+  }
+  
+  /* Hover: bold + outline */
+  .navbar__link:hover {
+    background-color: #FEFEFE;
+    font-weight: 700;            /* bold */
+    border-color: #61CBC7;
+  }
+  
+  /* Active (clicked) style */
+  .navbar__link--active {
+    background-color: #61CBC7;
+    color: #FEFEFE;
+    font-weight: 700;            /* keep bold when active */
+    border-color: #61CBC7;
+  }
+  
+  /* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .navbar__logo {
+      margin-bottom: 0.75rem;
+    }
+  
+    .navbar__links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;             /* tighter gap on mobile */
+      margin: 0;             /* remove any default margins */
+    }
+  
+    .navbar__link {
+      padding: 0.5rem 0.75rem;  /* slightly smaller touch targets */
+      font-size: 0.875rem;      /* about 14px if your base is 16px */
+    }
+  }
+  

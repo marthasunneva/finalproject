@@ -1,0 +1,46 @@
+// src/components/Navbar.jsx
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import './Navbar.css';
+
+export default function Navbar() {
+  return (
+    <nav className="navbar">
+      <div className="navbar__logo">
+        {/* Public assets are served from the root */}
+        <img src="/assets/logo.png" alt="Naturhistorisk Museum Aarhus" />
+      </div>
+      <ul className="navbar__links">
+        <li>
+          <Link to="/" className="navbar__link">
+            About The Museum
+          </Link>
+        </li>
+        <li>
+          <NavLink
+            to="/exhibitions"
+            className={({ isActive }) =>
+              isActive
+                ? 'navbar__link navbar__link--active'
+                : 'navbar__link'
+            }
+          >
+            Exhibitions
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/tickets"
+            className={({ isActive }) =>
+              isActive
+                ? 'navbar__link navbar__link--active'
+                : 'navbar__link'
+            }
+          >
+            Tickets
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+}

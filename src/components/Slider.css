@@ -1,0 +1,77 @@
+/* src/components/Slider.css */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+  }
+  
+  /* Keeps the correct aspect ratio */
+  .slider__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 53.48 / 25.44;
+  }
+  
+  .slider__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider__caption {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  }
+  .slider__caption h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+  }
+  .slider__caption p {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+  
+  .slider__arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 150ms;
+  }
+  .slider__arrow:hover {
+    color: #61CBC7;
+  }
+  .slider__arrow--left  { position: absolute; left: 0.5rem;  top: 50%; transform: translateY(-50%); }
+  .slider__arrow--right { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); }
+  
+  .slider__dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+  }
+  .slider__dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 150ms, background 150ms;
+  }
+  .slider__dot--active {
+    background: #61CBC7;
+    opacity: 1;
+  }
+  
