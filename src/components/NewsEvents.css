@@ -1,12 +1,15 @@
 /* src/components/NewsEvents.css */
+.news-events,
+.news-events * {
+    font-family: 'AU Passata', sans-serif;
+}
 
 .news-events {
     padding: 1rem 2rem 4rem;
-    position: relative;  /* needed for centering the progress bar */
+    position: relative;  /* for the progress bar */
   }
   
   .news-events h2 {
-    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
   
@@ -15,6 +18,7 @@
     color: #666;
   }
   
+  /* Base scroller: horizontal flex on mobile & tablet */
   .news-events__scroller {
     display: flex;
     gap: 1.5rem;
@@ -23,7 +27,7 @@
     scrollbar-width: none; /* Firefox */
   }
   .news-events__scroller::-webkit-scrollbar {
-    display: none;      /* WebKit */
+    display: none;         /* WebKit */
   }
   
   .news-card {
@@ -48,6 +52,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.4);
+    color: #FEFEFE;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -57,22 +62,21 @@
     transition: opacity 200ms;
   }
   
+  /* Force all text inside the overlay to white */
+  .news-card__overlay,
+  .news-card__overlay * {
+    color: #FEFEFE !important;
+  }
+  
   .news-card:hover .news-card__overlay {
     opacity: 1;
   }
   
   .news-card__overlay-text {
-    color: #FEFEFE;
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 700;
   }
-
-  /* ensure overlay text is white */
-.news-card:hover .news-card__overlay .news-card__overlay-text {
-    color: #FEFEFE;
-  }
-  
   
   .news-card__button {
     background: transparent;
@@ -80,13 +84,13 @@
     border: 2px solid transparent;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    font-weight: 400;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
-    transition: 
-      background-color 150ms, 
-      border-color 150ms, 
-      color 150ms, 
+    transition:
+      background-color 150ms,
+      border-color 150ms,
+      color 150ms,
       font-weight 100ms;
   }
   
@@ -102,7 +106,7 @@
     transition: transform 150ms, font-size 150ms;
     line-height: 1;
     font-size: 1.25rem;
-    color:#61CBC7;
+    color: #61CBC7;
   }
   
   .news-card__button:hover .news-card__btn-arrow {
@@ -113,7 +117,7 @@
   /* Centered, fixed-width black track */
   .news-events__progress {
     position: absolute;
-    bottom: 0.5rem;      /* moves the bar closer to the cards */
+    bottom: 0.5rem;       /* just under the cards */
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
@@ -128,5 +132,29 @@
     width: 0;
     background: #61CBC7;
     transition: width 0.1s ease-out;
+  }
+  
+  /* Desktop: wrap cards into rows but keep horizontal scroll */
+  @media (min-width: 1024px) {
+    .news-events__scroller {
+      flex-wrap: wrap;           /* allow multi-row */
+      justify-content: flex-start;
+      overflow-x: auto;          /* still scrollable if overflow */
+      max-height: none;          /* remove any height clamp */
+    }
+  
+    .news-card {
+      flex: 0 0 calc(33.333% - 1rem);  /* three cards per row minus gap */
+      margin-bottom: 1.5rem;           /* vertical gap between rows */
+    }
+  
+    /* keep the progress thumb visible on desktop */
+    .news-events__progress {
+      display: block;
+    }
+  }
+
+  .new-events h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
   }
   

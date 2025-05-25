@@ -57,6 +57,8 @@
   /* Social icons */
   .footer__social {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1.5rem;
     margin-top: 0.5rem;
   }
@@ -97,20 +99,43 @@
     color: #CCCCCC;
   }
   
-  /* Responsive stack */
   @media (max-width: 768px) {
     .footer {
       flex-direction: column;
-      align-items: center;
+      align-items: center; /* center entire footer */
       text-align: center;
     }
+  
     .footer__left,
     .footer__right {
       width: 100%;
       max-width: none;
     }
+  
+    /* turn left column into a centered flex‐column */
+    .footer__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* CENTER its children */
+      gap: 1.5rem;
+    }
+  
+    /* center the list items too */
+    .footer__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* center each link */
+      gap: 1rem;
+    }
+  
+    /* center the social icons as well */
+    .footer__social {
+      justify-content: center !important;
+    }
+  
     .footer__right {
       margin-top: 2rem;
     }
   }
+  
   

@@ -1,63 +1,109 @@
 /* src/components/LearnMore.css */
 
+/* Ensure AU Passata is everywhere */
+.learn-more,
+.learn-more * {
+  font-family: 'AU Passata', sans-serif;
+}
+
+/* Remove default list styling */
+.learn-more__list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.learn-more__list ul li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Base (mobile→tablet) */
 .learn-more {
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem 1rem;
+}
+
+.learn-more__list h2 {
+  margin-bottom: 1.5rem;
+}
+
+.learn-more__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  background: #FEFEFE;
+  color: #0A0A0A;
+  border: 2px solid transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 150ms, font-weight 100ms;
+  font-weight: 400; /* regular for links */
+}
+
+.learn-more__link:hover {
+  border-color: #61CBC7;
+  font-weight: 700;
+}
+
+.learn-more__arrow {
+  margin-left: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25);
+  transition: transform 150ms;
+}
+
+.learn-more__link:hover .learn-more__arrow {
+  transform: translateX(4px);
+}
+
+/* Image styles */
+.learn-more__image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  margin-left: 8rem;
+}
+
+/* Tablet (≥600px) – two-column grid */
+@media (min-width: 600px) {
+  .learn-more {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
     align-items: center;
-    /* top padding unchanged, bottom padding reduced */
-    padding: 4rem 2rem 1rem;
   }
-  
-  .learn-more__list h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+}
+
+/* Desktop (≥1024px) – larger text, custom column ratio */
+@media (min-width: 1024px) {
+    .learn-more {
+      gap: 3rem;
+      padding: 6rem 4rem 2rem;
+    }
   }
-  
-  .learn-more__list ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .learn-more__list ul li {
-    display: flex;
-    margin-bottom: 1rem;
-  }
-  
+
   .learn-more__link {
-    display: inline-flex;
-    align-items: center;
-    flex: 1;
-    background: #FEFEFE;
-    border: 2px solid transparent;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    font-family: 'AU Passata', sans-serif;
-    font-weight: 400;
-    cursor: pointer;
-    transition: border-color 150ms, font-weight 100ms;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
   }
-  
-  .learn-more__link:hover {
-    border-color: #61CBC7;
-    font-weight: 700;
-  }
-  
   .learn-more__arrow {
-    margin-left: auto;
-    margin-right: 0.5rem;
-    transition: transform 150ms;
+    font-size: 4rem;
   }
-  
-  .learn-more__link:hover .learn-more__arrow {
-    transform: translateX(4px);
-  }
-  
+
   .learn-more__image img {
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
+    margin-left: 2rem;
     border-radius: 16px;
-    object-fit: cover;
-    display: block;
   }
-  
+
+  .learn-more h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }

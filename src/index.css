@@ -25,6 +25,22 @@
   src: url('/fonts/aupassata_bold-webfont.woff2') format('woff2');
 }
 
-body {
-  font-size: 24px;
+/* Fluid heading that grows from 2rem up to 2.5rem */
+.learn-more h2,
+.news-events h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+/* Fluid link/button text in Learn More */
+.learn-more__link {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Make the arrow scale with its parent text */
+.learn-more__arrow {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+html {
+  font-size: 100%;
 }
