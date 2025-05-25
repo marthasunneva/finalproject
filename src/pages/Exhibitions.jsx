@@ -31,37 +31,20 @@ export default function Exhibitions() {
         </div>
       </div>
 
-      {/* New & Elevated */}
       <section className="exhibitions__new-elevated">
-        <div className="text">
-          <h2>New &amp; Elevated Exhibition</h2>
-          <p>
-            Step into the savannah like never before. The beloved African
+  <div className="text">
+    <h2>New &amp; Elevated Exhibition</h2>
+    <p>Step into the savannah like never before. The beloved African
             Savannah exhibition has been digitally elevated, bringing new
-            life to familiar dioramas.
-          </p>
-          <p>
-            Curious sounds, moving images, and real-time reflections will
-            make your visit unique!
-          </p>
-        </div>
-        <div className="media">
-          {/* Primary: GIF */}
-          <img
-            src="/assets/lion.gif"
-            alt="Lion Head Exhibit"
-            className="exhibitions__gif"
-          />
-
-          {/*
-          // If you ever want to swap in video + poster fallback instead, use:
-          <video controls poster="/assets/lion_frame.png" className="exhibitions__video">
-            <source src="/assets/lion.MOV" type="video/quicktime" />
-            Your browser doesn’t support embedded videos.
-          </video>
-          */}
-        </div>
-      </section>
+            life to familiar dioramas.</p>
+    <p>Curious sounds, moving images, and real-time reflections will
+    make your visit unique!</p>
+  </div>
+  <div className="media">
+    <img src="/assets/lion.gif" alt="Lion Exhibit" />
+  </div>
+</section>
+       
 
       {/* Different Times */}
       <section className="exhibitions__different-times">
