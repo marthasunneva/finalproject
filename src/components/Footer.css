@@ -1,0 +1,116 @@
+/* src/components/Footer.css */
+
+.footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #0A0A0A;
+    color: #FEFEFE;
+    padding: 3rem 2rem;
+    font-family: 'AU Passata', sans-serif;
+    gap: 2rem;
+  }
+  
+  /* Left column */
+  .footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer__list li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .footer__link {
+    display: inline-block;
+    text-decoration: none;
+    color: #FEFEFE;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition:
+      border-color 150ms,
+      background-color 150ms,
+      color 150ms,
+      font-weight 100ms;
+    font-family: 'AU Passata', sans-serif;
+    font-weight: 400;
+  }
+  
+  .footer__link:hover {
+    border-color: #61CBC7;
+    color: #FEFEFE;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  
+  /* Social icons */
+  .footer__social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .footer__social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: filter 150ms;
+  }
+  
+  .footer__social a:hover img {
+    filter: 
+    brightness(0)
+    saturate(100%)
+    invert (36%)
+    sepia(71%)
+    saturate(409%)
+    hue-rotate(150deg)
+    brightness(94%)
+    contrast(91%)
+    hue-rotate(160deg);
+  }
+  
+  /* Right column (newsletter) */
+  .footer__right {
+    max-width: 400px;
+  }
+  
+  .footer__right h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer__right p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #CCCCCC;
+  }
+  
+  /* Responsive stack */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer__left,
+    .footer__right {
+      width: 100%;
+      max-width: none;
+    }
+    .footer__right {
+      margin-top: 2rem;
+    }
+  }
+  

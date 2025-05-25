@@ -1,0 +1,63 @@
+/* src/components/LearnMore.css */
+
+.learn-more {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    /* top padding unchanged, bottom padding reduced */
+    padding: 4rem 2rem 1rem;
+  }
+  
+  .learn-more__list h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .learn-more__list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .learn-more__list ul li {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .learn-more__link {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    background: #FEFEFE;
+    border: 2px solid transparent;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-family: 'AU Passata', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: border-color 150ms, font-weight 100ms;
+  }
+  
+  .learn-more__link:hover {
+    border-color: #61CBC7;
+    font-weight: 700;
+  }
+  
+  .learn-more__arrow {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    transition: transform 150ms;
+  }
+  
+  .learn-more__link:hover .learn-more__arrow {
+    transform: translateX(4px);
+  }
+  
+  .learn-more__image img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+  }
+  

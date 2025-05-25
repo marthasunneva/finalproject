@@ -1,27 +1,36 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
-import Footer from './components/Footer';
+import LearnMore from './components/LearnMore';
+import NewsEvents from './components/NewsEvents';
 import Exhibitions from './pages/Exhibitions';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
     <>
       <Navbar />
+
       <Routes>
+        {/* Home page */}
         <Route
           path="/"
           element={
             <>
               <Slider />
-              {/* other homepage sections */}
+              <LearnMore />
+              <NewsEvents />
             </>
           }
         />
+
+        {/* Exhibitions page */}
         <Route path="/exhibitions" element={<Exhibitions />} />
-        {/* add /tickets route when you build it */}
+
+        {/* TODO: add /tickets route here when ready */}
       </Routes>
+
       <Footer />
     </>
   );
