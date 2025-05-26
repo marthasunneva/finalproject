@@ -1,6 +1,9 @@
 // src/components/NewsEvents.jsx
 import React, { useRef, useState, useEffect } from 'react';
 import './NewsEvents.css';
+import '../assets/newsimg1.png';
+import '../assets/newsimg2.png';
+import '../assets/newsimg3.png';
 
 const ITEMS = [
   { img: '../assets/newsimg1.png', title: 'Experience the Wild Horses with Peter Lassen', overlay: 'Get a very special experience in Denmark’s most beautiful nature!' },

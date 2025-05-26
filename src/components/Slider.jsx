@@ -1,15 +1,23 @@
 // src/components/Slider.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './Slider.css';
+import slide1 from '../assets/heroslide1.png';
+import slide2 from '../assets/heroslide2.png';
+import slide3 from '../assets/heroslide3.png';
+import slide4 from '../assets/heroslide4.png';
+import slide5 from '../assets/heroslide5.png';
+import slide6 from '../assets/heroslide6.png';
+
+const images = [slide1, slide2, slide3, slide4, slide5, slide6]
 
 export default function Slider() {
   const images = [
-    '../assets/heroslide1.png',
-    '../assets/heroslide2.png',
-    '../assets/heroslide3.png',
-    '../assets/heroslide4.png',
-    '../assets/heroslide5.png',
-    '../assets/heroslide6.png',
+    '/assets/heroslide1.png',
+    '/assets/heroslide2.png',
+    '/assets/heroslide3.png',
+    '/assets/heroslide4.png',
+    '/assets/heroslide5.png',
+    '/assets/heroslide6.png',
   ];
 
   const [index, setIndex] = useState(0);
