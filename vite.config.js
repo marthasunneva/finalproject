@@ -1,13 +1,13 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: mode === 'production'
-    ? '/finalproject/'    // used when running `npm run build`
-    : '/',                // used when running `npm run dev`
+  // serve & build everything with *relative* paths:
+  base: './',
   build: {
-    // increase the warning threshold from the default 500 KiB up to 1 MiB
+    // bump the chunk warning limit if you like
     chunkSizeWarningLimit: 1024
   }
-}))
+})
