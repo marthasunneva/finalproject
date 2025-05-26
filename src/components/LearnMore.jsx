@@ -1,6 +1,7 @@
 // src/components/LearnMore.jsx
 import React from 'react';
 import './LearnMore.css';
+import doorImage from '../assets/doorimg.png';
 
 const LINKS = [
   'School & Institution',
@@ -27,7 +28,7 @@ export default function LearnMore() {
         </ul>
       </div>
       <div className="learn-more__image">
-        <img src="/assets/doorimg.png" alt="Museum Entrance" />
+        <img src={doorImage} alt="Museum Entrance" />
       </div>
     </section>
   );

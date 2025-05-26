@@ -2,13 +2,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
+import logoImage from '../assets/logo.png';
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
         {/* Public assets are served from the root */}
-        <img src="/assets/logo.png" alt="Naturhistorisk Museum Aarhus" />
+        <img src={logoImage} alt="Naturhistorisk Museum Aarhus" />
       </div>
       <ul className="navbar__links">
         <li>

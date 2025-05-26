@@ -2,6 +2,11 @@
 import React from 'react';
 import NewsletterForm from './NewsletterForm';
 import './Footer.css';
+import instagramIcon from '../assets/instagram.png';
+import facebookIcon from '../assets/facebook.png';
+import youtubeIcon from '../assets/youtube.png';
+import linkedinIcon from '../assets/linkedin.png';
+import tripadvisorIcon from '../assets/tripadvisor.png';
 
 export default function Footer() {
   return (
@@ -20,35 +25,35 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/instagram.png" alt="Instagram" />
+            <img src={instagramIcon} alt="Instagram" />
           </a>
           <a
             href="https://www.facebook.com/naturhistoriskmuseum/?locale=da_DK"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/facebook.png" alt="Facebook" />
+            <img src={facebookIcon} alt="Facebook" />
           </a>
           <a
             href="https://www.youtube.com/@naturhistoriskmuseumaarhus6461"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/youtube.png" alt="YouTube" />
+            <img src={youtubeIcon} alt="YouTube" />
           </a>
           <a
             href="https://www.linkedin.com/company/naturhistorisk-museum-aarhus?originalSubdomain=dk"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/linkedin.png" alt="LinkedIn" />
+            <img src={linkedinIcon} alt="LinkedIn" />
           </a>
           <a
             href="https://www.tripadvisor.dk/Attraction_Review-g189530-d3600336-Reviews-Naturhistorisk_Museum-Aarhus_East_Jutland_Jutland.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/tripadvisor.png" alt="TripAdvisor" />
+            <img src={tripadvisorIcon} alt="TripAdvisor" />
           </a>
         </div>
       </div>

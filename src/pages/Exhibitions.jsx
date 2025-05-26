@@ -1,6 +1,9 @@
 // src/pages/Exhibitions.jsx
 import React from 'react';
 import './Exhibitions.css';
+import '../assets/savannahimg.png';
+import '../assets/lion.gif';
+import '../assets/antelopesimg.png';
 
 export default function Exhibitions() {
   return (
@@ -13,7 +16,7 @@ export default function Exhibitions() {
       {/* Hero */}
       <div className="exhibitions__hero">
         <img
-          src="/assets/savannahimg.png"
+          src="../assets/savannahimg.png"
           alt="Savannah Diorama"
         />
         <div className="exhibitions__hero-text">
@@ -41,7 +44,7 @@ export default function Exhibitions() {
     make your visit unique!</p>
   </div>
   <div className="media">
-    <img src="/assets/lion.gif" alt="Lion Exhibit" />
+    <img src="../assets/lion.gif" alt="Lion Exhibit" />
   </div>
 </section>
        
@@ -67,7 +70,7 @@ export default function Exhibitions() {
         </div>
         <div className="dt-images">
           <img
-            src="/assets/antelopesimg.png"
+            src="../assets/antelopesimg.png"
             alt="Antelopes Exhibit"
           />
         </div>

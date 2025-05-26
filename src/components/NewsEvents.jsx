@@ -3,9 +3,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import './NewsEvents.css';
 
 const ITEMS = [
-  { img: '/assets/newsimg1.png', title: 'Experience the Wild Horses with Peter Lassen', overlay: 'Get a very special experience in Denmark’s most beautiful nature!' },
-  { img: '/assets/newsimg2.png', title: 'Animals In Cities',                     overlay: 'Join Vimse on an adventure in the city and meet lots of exciting animals!' },
-  { img: '/assets/newsimg3.png', title: 'Participate and Win!',                   overlay: 'Participate in the survey and win fun prizes!' },
+  { img: '../assets/newsimg1.png', title: 'Experience the Wild Horses with Peter Lassen', overlay: 'Get a very special experience in Denmark’s most beautiful nature!' },
+  { img: '../assets/newsimg2.png', title: 'Animals In Cities',                     overlay: 'Join Vimse on an adventure in the city and meet lots of exciting animals!' },
+  { img: '../assets/newsimg3.png', title: 'Participate and Win!',                   overlay: 'Participate in the survey and win fun prizes!' },
 ];
 
 export default function NewsEvents() {

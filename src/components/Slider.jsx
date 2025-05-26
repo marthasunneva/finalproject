@@ -4,12 +4,12 @@ import './Slider.css';
 
 export default function Slider() {
   const images = [
-    '/assets/heroslide1.png',
-    '/assets/heroslide2.png',
-    '/assets/heroslide3.png',
-    '/assets/heroslide4.png',
-    '/assets/heroslide5.png',
-    '/assets/heroslide6.png',
+    '../assets/heroslide1.png',
+    '../assets/heroslide2.png',
+    '../assets/heroslide3.png',
+    '../assets/heroslide4.png',
+    '../assets/heroslide5.png',
+    '../assets/heroslide6.png',
   ];
 
   const [index, setIndex] = useState(0);
