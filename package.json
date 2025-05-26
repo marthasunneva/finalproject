@@ -6,7 +6,6 @@
   "homepage": "https://marthasunneva.github.io/finalproject",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "build": "vite build && rm -rf docs && mkdir docs && cp -r dist/* docs/"
