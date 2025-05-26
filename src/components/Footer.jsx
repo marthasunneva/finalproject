@@ -2,7 +2,6 @@
 import React from 'react';
 import NewsletterForm from './NewsletterForm';
 import './Footer.css';
-import instagramIcon from '../assets/instagram.png';
 
 export default function Footer() {
   return (
@@ -21,7 +20,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={instagramIcon} alt="Instagram" />
+            <img src="/assets/instagram.png" alt="Instagram" />
           </a>
           <a
             href="https://www.facebook.com/naturhistoriskmuseum/?locale=da_DK"
