@@ -9,8 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "build": "vite build && rm -rf docs && mkdir docs && cp -r dist/* docs/"
   },
   "dependencies": {
     "firebase": "^11.8.1",
